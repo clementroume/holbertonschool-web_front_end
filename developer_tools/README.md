@@ -30,7 +30,7 @@ The `developper_tools` directory includes the following files:
 | `3-button_styles`         | File containing all CSS styles applied to the "Download me!" button, listed one per line. |
 | `4-new_buttons.png`       | Screenshot showing all updated buttons: primary buttons (`btn-primary`) with `#0080ee` as the background color, and outlined light buttons (`btn-outline-light`) with `#0020aa` as the text color, merged into one image. |
 | `5-deleted_elements.png`  | Screenshot of the PORTFOLIO section after removing the `div` containing the “cake” box using Developer Tools. |
-|                           |                                                              |
+| `6-declaration_file`      | File containing the name of the CSS file where the `margin-bottom` declaration for the `h2` with the text "ABOUT" originates. |
 |                           |                                                              |
 |                           |                                                              |
 
