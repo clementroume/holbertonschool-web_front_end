@@ -27,9 +27,9 @@ The `developper_tools` directory includes the following files:
 | `0-responsive_device.png` | Screenshot of the website taken using the Device Toolbar in Developer Tools, showing the rendering size for "iPhone X". |
 | `1-change_bg_color.png`   | Screenshot of the PORTFOLIO section after changing the `background-color` of the `<body>` to `#4233bd` using Developer Tools. |
 | `2-pathways_menu.png`     | Screenshot of the “cake” block in the PORTFOLIO section with the hover state forced using Developer Tools. |
-|                           |                                                              |
-|                           |                                                              |
-|                           |                                                              |
+| `3-button_styles`         | File containing all CSS styles applied to the "Download me!" button, listed one per line. |
+| `4-new_buttons.png`       | Screenshot showing all updated buttons: primary buttons (`btn-primary`) with `#0080ee` as the background color, and outlined light buttons (`btn-outline-light`) with `#0020aa` as the text color, merged into one image. |
+| `5-deleted_elements.png`  | Screenshot of the PORTFOLIO section after removing the `div` containing the “cake” box using Developer Tools. |
 |                           |                                                              |
 |                           |                                                              |
 |                           |                                                              |
