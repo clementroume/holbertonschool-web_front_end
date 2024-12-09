@@ -1,0 +1,17 @@
+/* 
+  Task 11: For each - Loop through a list of names and create classes for each name 
+  that assign background images based on the name.
+  This file demonstrates the use of the `@each` directive to loop over a list of names 
+  and create a class for each one. Each class will assign a background image using the `image-url()` function.
+*/
+
+@import '11-photos'; // Import the list of names from the '11-photos.scss' file
+
+// Loop through each name in the $list-names variable
+@each $name in $list-names {
+  .photo-#{$name} {
+    // Dynamically create a class for each name
+    background: image-url('photos/#{$name}.jpg')
+      no-repeat; // Use the name to set the background image
+  }
+}
