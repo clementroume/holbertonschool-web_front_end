@@ -1,0 +1,16 @@
+/* 
+ * 100 - Columns and operators
+ * 
+ * This Sass file generates classes with different column widths.
+ * It uses a @for loop to create four column classes
+ * The width of each column is calculated by dividing 100% by the column number.
+ * Sass math functions are used for the division to ensure proper handling of the percentages.
+ */
+
+@use 'sass:math';
+
+@for $i from 1 to 5 {
+  .col-#{$i} {
+    width: math.div(100%, $i);
+  }
+}
