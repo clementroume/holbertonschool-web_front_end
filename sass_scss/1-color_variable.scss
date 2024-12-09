@@ -1,10 +1,16 @@
-/*Color variable*/
+/* 
+  Task 1: Color variable
+  This Sass file uses a variable to define a single color (#3D3D3D) 
+  and applies it to the text color of the <body> and <p> tags. 
+  Variables help maintain consistency and simplify future updates.
+*/
+
 $color: #3D3D3D;
 
 body {
-	color: $color;
+  color: $color;
 }
 
 p {
-	color: $color;
+  color: $color;
 }
