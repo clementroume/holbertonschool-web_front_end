@@ -1,11 +1,10 @@
 /* 
- * 100 - Columns and operators
- * 
- * This Sass file generates classes with different column widths.
- * It uses a @for loop to create four column classes
- * The width of each column is calculated by dividing 100% by the column number.
- * Sass math functions are used for the division to ensure proper handling of the percentages.
- */
+  Task 100: Columns and operators - Create classes with different column widths
+  This file demonstrates how to use a `@for` loop to generate classes for different column widths.
+  It creates classes `.col-1` to `.col-4` with respective widths of 100%, 50%, 33.33%, and 25%.
+  The `@for` directive is used to iterate over the range from 1 to 4, and the `math.div()` function 
+  is used to calculate the width for each class.
+*/
 
 @use 'sass:math';
 
