@@ -1,0 +1,14 @@
+/* 
+  Task 3: Nested tag
+  This Sass file demonstrates the use of nested declarations to style HTML elements.
+  It removes margin and padding from the <body> tag and applies a 10px margin
+  to all <p> tags inside the <body> tag.
+*/
+
+body {
+  margin: 0px;
+  padding: 0px;
+  p {
+    margin: 10px;
+  }
+}
