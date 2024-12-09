@@ -1,0 +1,23 @@
+/* 
+  Task 2: Colors
+  This Sass file demonstrates the use of multiple variables to define
+  a text color (#3D3D3D) and a background color (#6D6D6D). 
+  These variables are then applied to various HTML elements 
+  (<body>, <p>, and <h2>) for consistent styling.
+*/
+
+$text-color: #3d3d3d;
+$background-color: #6d6d6d;
+
+body {
+  color: $text-color;
+  background-color: $background-color;
+}
+
+p {
+  color: $text-color;
+}
+
+h2 {
+  background-color: $background-color;
+}
