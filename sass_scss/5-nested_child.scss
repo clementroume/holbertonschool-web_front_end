@@ -1,0 +1,14 @@
+/* 
+  Task 5: Nested child
+  This Sass file demonstrates the use of the parent selector (&) to style 
+  direct child elements. It applies a text color of #3D3D3D to the <body> tag,
+  and a text color of #FF0000 to any element with the class .red that is 
+  a direct child of the <body> tag.
+*/
+
+body {
+  color: #3d3d3d;
+  & > .red {
+    color: #ff0000;
+  }
+}
