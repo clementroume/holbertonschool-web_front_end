@@ -5,49 +5,52 @@
 $default-order: 'a' 'b' 'c' 'd' 'e' 'f' 'g' 'h' 'i' 'j' 'k' 'l' 'm' 'n' 'o' 'p'
   'q' 'r' 's' 't' 'u' 'v' 'w' 'x' 'y' 'z' !default;
 
-// Function to compare two strings based on custom alphabetical order
 @function _str-compare($a, $b, $order) {
-  $a: to-lower-case($a);
-  $b: to-lower-case($b);
+  @if type-of($a) == 'number' and type-of($b) == 'number' {
+    @return $a < $b;
+  }
 
-  // Compare character by character using the custom order
+  $a: to-lower-case($a + unquote(''));
+  $b: to-lower-case($b + unquote(''));
+
   @for $i from 1 through min(str-length($a), str-length($b)) {
     $char-a: str-slice($a, $i, $i);
     $char-b: str-slice($b, $i, $i);
-    @if index($order, $char-a) != index($order, $char-b) {
+
+    @if $char-a and $char-b and index($order, $char-a) != index($order, $char-b)
+    {
       @return index($order, $char-a) < index($order, $char-b);
     }
   }
-  // If characters are the same, shorter string comes first
+
   @return str-length($a) < str-length($b);
 }
 
-// Quick-sort function to sort the list
 @function quick-sort($list, $order: $default-order) {
-  @if length($list) <= 1 {
-    @return $list;
-  }
-
-  $pivot: nth($list, ceil(length($list) / 2));
   $less: ();
   $equal: ();
-  $greater: ();
+  $large: ();
 
-  @each $item in $list {
-    @if _str-compare($item, $pivot, $order) {
-      $less: append($less, $item);
-    } @else if $item == $pivot {
-      $equal: append($equal, $item);
-    } @else {
-      $greater: append($greater, $item);
+  @if length($list) > 1 {
+    $seed: nth($list, ceil(length($list) / 2));
+
+    @each $item in $list {
+      @if $item == $seed {
+        $equal: append($equal, $item, list-separator($list));
+      } @else if _str-compare($item, $seed, $order) {
+        $less: append($less, $item, list-separator($list));
+      } @else if not _str-compare($item, $seed, $order) {
+        $large: append($large, $item, list-separator($list));
+      }
     }
+
+    @return join(
+      join(quick-sort($less, $order), $equal),
+      quick-sort($large, $order)
+    );
   }
 
-  // Recursively sort and combine the lists
-  @return join(
-    join(quick-sort($less, $order), $equal),
-    quick-sort($greater, $order)
-  );
+  @return $list;
 }
 
 // Output the sorted list to the debug log
