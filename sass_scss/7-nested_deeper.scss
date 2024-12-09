@@ -1,9 +1,9 @@
 /* 
   Task 7: Nested and nested again
-  This Sass file demonstrates the use of nested declarations at multiple levels. 
-  It applies a font size of 14px to the <body> tag. Inside the <body> tag, 
-  it sets the font size of <h1> tags to 16px. Additionally, it applies a 
-  font size of 12px to <h1> tags with the class .smaller.
+  This Sass file demonstrates how to apply different font sizes to <body> and <h1> elements,
+  and how to target specific <h1> elements with the class .smaller. 
+  It sets the font size of <body> to 14px, the font size of <h1> to 16px, 
+  and the font size of <h1> with the class .smaller to 12px.
 */
 
 body {
