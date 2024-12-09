@@ -1,0 +1,13 @@
+/* 
+  Task 6: Nested hover
+  This Sass file demonstrates how to apply different styles to an element 
+  when it is hovered over. It sets the text color of <button> elements to 
+  #FF0000, and changes the text color to #00FF00 when the button is hovered.
+*/
+
+button {
+  color: #ff0000;
+  &:hover {
+    color: #00ff00;
+  }
+}
