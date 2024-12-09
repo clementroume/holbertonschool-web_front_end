@@ -25,6 +25,7 @@ Here’s an overview of the directories included in the repository:
 | **Directory**     | **Description**                                                            |
 | ----------------- | -------------------------------------------------------------------------- |
 | `developer_tools` | In this project, this [website](https://dev-tools.hbtn.info/) is analyzed. |
+| `sass_scss`       | This project introduces the CSS preprocessor Sass                          |
 
 ---
 
