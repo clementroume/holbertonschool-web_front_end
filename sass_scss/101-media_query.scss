@@ -1,7 +1,15 @@
-/* Task 101: Media query #0 */
+/* 
+  Task 101: Media query #0 - Adjust the font size of h1 tags based on screen width
+  This file sets the font size of h1 tags to 20px by default. It also includes a media query
+  to change the font size to 14px when the screen width is smaller than 320px.
+  This demonstrates how to use media queries in Sass to create responsive designs.
+*/
 h1 {
-  font-size: 20px;
-  @media (max-width: 320px) {
-    font-size: 14px;
+  font-size: 20px; // Default font size
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 14px; // Change font size for smaller screens
   }
 }
