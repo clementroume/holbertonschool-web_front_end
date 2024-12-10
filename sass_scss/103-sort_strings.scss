@@ -2,27 +2,22 @@
 
 @import '103-sort_list'; // Import the list of strings to sort
 
-// Default sort order: defines the custom order for sorting characters
 $sort-order: a b c d e f g h i j k l m n o p q r s t u v w x y z !default;
 
-// Function: Compare two strings based on the custom sort order
 @function compare($string1, $string2, $sort-order) {
   // Normalize strings to lowercase for case-insensitive comparison
   $string1: to-lower-case($string1 + unquote(''));
   $string2: to-lower-case($string2 + unquote(''));
 
-  // Compare character by character
   @for $i from 1 through min(str-length($string1), str-length($string2)) {
     $char1: str-slice($string1, $i, $i);
     $char2: str-slice($string2, $i, $i);
 
-    // If characters are found and their positions in the sort order differ
     @if $char1 and
       $char2 and
       index($sort-order, $char1) !=
       index($sort-order, $char2)
     {
-      // Return true if $char1 comes before $char2 in the custom sort order
       @return index($sort-order, $char1) < index($sort-order, $char2);
     }
   }
