@@ -9,79 +9,48 @@
 
 @import '103-sort_list'; // Import the list of strings to sort
 
-$default-order: 'a' 'b' 'c' 'd' 'e' 'f' 'g' 'h' 'i' 'j' 'k' 'l' 'm' 'n' 'o' 'p'
-  'q' 'r' 's' 't' 'u' 'v' 'w' 'x' 'y' 'z' !default; // Default alphabetical order
+$sort-order: a b c d e f g h i j k l m n o p q r s t u v w x y z !default;
 
-// Compare two strings to check their order based on the custom alphabetical order
-@function _str-compare($a, $b, $order) {
-  @if type-of($a) == 'number' and type-of($b) == 'number' {
-    @return $a < $b; // For numbers, compare directly
-  }
+@function compare($string-a, $string-b, $sort-order) {
+  $string-a: to-lower-case($string-a + unquote(''));
+  $string-b: to-lower-case($string-b + unquote(''));
 
-  // Convert both strings to lowercase for case-insensitive comparison
-  $a: to-lower-case($a + unquote(''));
-  $b: to-lower-case($b + unquote(''));
+  @for $i from 1 through min(str-length($string-a), str-length($string-b)) {
+    $char-a: str-slice($string-a, $i, $i);
+    $char-b: str-slice($string-b, $i, $i);
 
-  // Compare character by character
-  @for $i from 1 through min(str-length($a), str-length($b)) {
-    $char-a: str-slice($a, $i, $i);
-    $char-b: str-slice($b, $i, $i);
-
-    // If characters differ, return the comparison result based on the custom order
-    @if $char-a and $char-b and index($order, $char-a) != index($order, $char-b)
+    @if $char-a and
+      $char-b and
+      index($sort-order, $char-a) !=
+      index($sort-order, $char-b)
     {
-      @return index($order, $char-a) < index($order, $char-b);
+      @return index($sort-order, $char-a) < index($sort-order, $char-b);
     }
   }
 
-  // If strings are the same up to the length of the shortest one, the shorter string comes first
-  @return str-length($a) < str-length($b);
+  @return str-length($string-a) < str-length($string-b);
 }
 
-// Quick-sort function to sort a list of strings based on the custom order
-@function quick-sort($list, $order: $default-order) {
-  $less: (); // List of items smaller than the pivot
-  $equal: (); // List of items equal to the pivot
-  $large: (); // List of items larger than the pivot
-
-  // If the list has more than one element, apply the sorting
-  @if length($list) > 1 {
-    $seed: nth($list, ceil(length($list) / 2)); // Choose a pivot
-
-    @each $item in $list {
-      @if $item == $seed {
-        $equal: append(
-          $equal,
-          $item,
-          list-separator($list)
-        ); // Equal items go into the equal list
-      } @else if _str-compare($item, $seed, $order) {
-        $less: append(
-          $less,
-          $item,
-          list-separator($list)
-        ); // Items smaller than the pivot
-      } @else if not _str-compare($item, $seed, $order) {
-        $large: append(
-          $large,
-          $item,
-          list-separator($list)
-        ); // Items larger than the pivot
-      }
-    }
-
-    // Recursively sort the lists and join them together
-    @return join(
-      join(quick-sort($less, $order), $equal),
-      quick-sort($large, $order)
-    );
+@function swap($list, $index-a, $index-b) {
+  @if abs($index-a) > length($list) or abs($index-b) > length($list) {
+    @return $list;
   }
-
-  // Return the list as-is if it contains one or fewer elements
+  $temp: nth($list, $index-a);
+  $list: set-nth($list, $index-a, nth($list, $index-b));
+  $list: set-nth($list, $index-b, $temp);
   @return $list;
 }
 
-// Output the sorted list to the debug log
-@debug quick-sort(
-  $list_to_sort
-); // This will print the sorted list to the debug output
+@function sort($list, $sort-order) {
+  @for $i from 1 through length($list) {
+    @for $j from $i * -1 through -1 {
+      $j: abs($j);
+      @if $j > 1 and compare(nth($list, $j), nth($list, $j - 1), $sort-order) {
+        $list: swap($list, $j, $j - 1);
+      }
+    }
+  }
+  @return $list;
+}
+
+@debug sort($list_to_sort, $sort-order);
