@@ -34,7 +34,7 @@ The `flexbox` directory includes the following files:
 | `1-styles.css`    | CSS file identical to `0-styles.css`, shared for continuity in this step. |
 | `2-index.html`    | Same as `1-index.html` (no changes made to the HTML file).   |
 | `2-styles.css`    | CSS demonstrating how `flex-direction` affects layout structure, reversing the order of "Latest news" cards. |
-| `3-index.html`    | Simplifies lists in the services section using `flex-wrap` to handle overflow. |
+| `3-index.html`    | Simplifies the services list by removing the second `ul` and placing the 3 list items under the first `ul`. |
 | `3-styles.css`    | CSS for wrapping elements within a row using `flex-wrap: wrap`. |
 | `4-index.html`    | Adjusts spacing and alignment between service items using the `calc()` function for widths. |
 | `4-styles.css`    | CSS implementing margin adjustments for consistent spacing in a flexible grid. |
