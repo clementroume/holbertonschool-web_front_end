@@ -38,8 +38,8 @@ The `flexbox` directory includes the following files:
 | `3-styles.css`    | CSS for wrapping elements within a row using `flex-wrap: wrap`. |
 | `4-index.html`    | No changes made to the HTML file.                            |
 | `4-styles.css`    | CSS implementing width adjustments with `calc()`, margin updates, and modifying spacing between flex service items |
-| `5-index.html`    | Refactors the header structure for better flexibility using Flexbox. |
-| `5-styles.css`    | CSS showcasing `justify-content: space-between` to distribute header elements. |
+| `5-index.html`    | Wrap the `div` with class `header-logo` and the `nav` with class `navbar-menu` inside a `div` with the class `header-container`. |
+| `5-styles.css`    | CSS showcasing `display: flex` and `justify-content: space-between` for `.header-container`; removes old rules for `header-logo` and `navbar-menu`. |
 | `6-index.html`    | Flexifies the navbar for horizontal alignment of items.      |
 | `6-styles.css`    | CSS demonstrating flex alignment within the navigation bar.  |
 | `7-index.html`    | Centers logo and navbar items using `align-items: center`.   |
