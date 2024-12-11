@@ -52,8 +52,8 @@ The `flexbox` directory includes the following files:
 | `10-styles.css`   | CSS for updating hero styles, moving declarations to `.hero-homepage`, and modifying `.section-hero` and `.section-body` properties. |
 | `11-article.html` | Adds the `hero-article` class to the `<header>`, a background image, a `section-category` span with text "Digital Life", and an `h1` with class `section-title` and text "Ut alios omittam, hunc appello, quem ille unum secutus est". |
 | `11-styles.css`   | CSS for the `hero-article` class with background properties, `before` pseudo-element, and alignment for `section-inner`and `section-body`. |
-| `12-article.html` |                                                              |
-| `12-styles.css`   |                                                              |
+| `12-article.html` | Adds the `main-article` div with a `container` div inside, and a `post` div containing `post-content` and `post-aside` with `post-meta` and `post-share` divs inside. |
+| `12-styles.css`   | CSS for styling the `main-article`, `post`, `post-content`, and `post-aside` with flexbox, along with padding and order properties. |
 | `13-article.html` |                                                              |
 | `13-styles.css`   |                                                              |
 | `14-article.html` |                                                              |
