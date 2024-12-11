@@ -56,8 +56,8 @@ The `flexbox` directory includes the following files:
 | `12-styles.css`   | CSS for styling the `main-article`, `post`, `post-content`, and `post-aside` with flexbox, along with padding and order properties. |
 | `13-article.html` | Adds a `post-meta-list` unordered list in the `post-meta` div, with entries for author, date, and tags, including nested links and a `tag-list` sublist. |
 | `13-styles.css`   | CSS for `post-meta-list` and `tag-list` with flexbox properties, styling for `strong` elements, borders, and pseudo-elements for list formatting. |
-| `14-article.html` |                                                              |
-| `14-styles.css`   |                                                              |
+| `14-article.html` | Adds a social navigation list in the `post-share` div, replicating the footer's list without Instagram, with default link values. |
+| `14-styles.css`   | No changes made to the CSS file.                             |
 
 ---
 
