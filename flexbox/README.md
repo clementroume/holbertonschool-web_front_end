@@ -42,8 +42,8 @@ The `flexbox` directory includes the following files:
 | `5-styles.css`    | CSS showcasing `display: flex` and `justify-content: space-between` for `.header-container`; removes old rules for `header-logo` and `navbar-menu`. |
 | `6-index.html`    | No changes made to the HTML file.                            |
 | `6-styles.css`    | CSS demonstrating `display: flex` for the `nav` class and adjustments to `.nav-item` margins and variables. |
-| `7-index.html`    | Centers logo and navbar items using `align-items: center`.   |
-| `7-styles.css`    | CSS focusing on vertical alignment in Flexbox containers.    |
+| `7-index.html`    | No changes made to the HTML file.                            |
+| `7-styles.css`    | CSS focusing on vertically centering the logo and navbar items using `align-items: center` in the `.header-container`class. |
 | `8-index.html`    | Simplifies the hero banner layout with Flexbox properties like `flex-direction` and `justify-content`. |
 | `8-styles.css`    | CSS restructuring the hero section for responsiveness and visual balance. |
 | `9-index.html`    | Aligns content in the About Us section using `align-self` for individual control. |
