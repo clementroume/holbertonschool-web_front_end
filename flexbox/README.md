@@ -44,20 +44,20 @@ The `flexbox` directory includes the following files:
 | `6-styles.css`    | CSS demonstrating `display: flex` for the `nav` class and adjustments to `.nav-item` margins and variables. |
 | `7-index.html`    | No changes made to the HTML file.                            |
 | `7-styles.css`    | CSS focusing on vertically centering the logo and navbar items using `align-items: center` in the `.header-container`class. |
-| `8-index.html`    | Simplifies the hero banner layout with Flexbox properties like `flex-direction` and `justify-content`. |
-| `8-styles.css`    | CSS restructuring the hero section for responsiveness and visual balance. |
-| `9-index.html`    | Aligns content in the About Us section using `align-self` for individual control. |
-| `9-styles.css`    | CSS introducing targeted alignment for specific elements within a Flexbox container. |
-| `10-article.html` | Refines the hero section structure and updates its styles for better responsiveness. |
-| `10-styles.css`   | CSS showcasing relative positioning and spacing adjustments for hero elements. |
-| `11-article.html` | Creates a detailed hero banner with background images and new content elements. |
-| `11-styles.css`   | CSS demonstrating complex background image styling and layering techniques. |
-| `12-article.html` | Structures the main article content with Flexbox, introducing sidebars and nested elements. |
-| `12-styles.css`   | CSS for aligning and structuring nested elements in a responsive layout. |
-| `13-article.html` | Enhances the aside section with metadata and tag lists, demonstrating advanced Flexbox properties. |
-| `13-styles.css`   | CSS for styling metadata lists and inline elements with Flexbox. |
-| `14-article.html` | Adds social sharing icons to the article layout, showcasing consistent styling and alignment. |
-| `14-styles.css`   | CSS for maintaining consistent design patterns across social media links and buttons. |
+| `8-index.html`    | No changes made to the HTML file.                            |
+| `8-styles.css`    | CSS for simplifying the hero banner with `display: flex`, `flex-direction: column`, `align-items: flex-start`, `justify-content: center`, and `min-height: 50vh` in the `.section-hero .section-inner` class. |
+| `9-index.html`    |                                                              |
+| `9-styles.css`    |                                                              |
+| `10-article.html` |                                                              |
+| `10-styles.css`   |                                                              |
+| `11-article.html` |                                                              |
+| `11-styles.css`   |                                                              |
+| `12-article.html` |                                                              |
+| `12-styles.css`   |                                                              |
+| `13-article.html` |                                                              |
+| `13-styles.css`   |                                                              |
+| `14-article.html` |                                                              |
+| `14-styles.css`   |                                                              |
 
 ---
 
