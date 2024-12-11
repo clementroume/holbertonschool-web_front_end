@@ -48,8 +48,8 @@ The `flexbox` directory includes the following files:
 | `8-styles.css`    | CSS for simplifying the hero banner with `display: flex`, `flex-direction: column`, `align-items: flex-start`, `justify-content: center`, and `min-height: 50vh` in the `.section-hero .section-inner` class. |
 | `9-index.html`    | No changes made to the HTML file.                            |
 | `9-styles.css`    | CSS for better alignment in the About Us section, using `align-self: center` for all classes beginning with `col-` inside the `.section-about-us` class. |
-| `10-article.html` |                                                              |
-| `10-styles.css`   |                                                              |
+| `10-article.html` | New starter file for the article, which will include the `hero-homepage` class. |
+| `10-styles.css`   | CSS for updating hero styles, moving declarations to `.hero-homepage`, and modifying `.section-hero` and `.section-body` properties. |
 | `11-article.html` |                                                              |
 | `11-styles.css`   |                                                              |
 | `12-article.html` |                                                              |
