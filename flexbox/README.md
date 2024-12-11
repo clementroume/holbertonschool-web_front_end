@@ -50,8 +50,8 @@ The `flexbox` directory includes the following files:
 | `9-styles.css`    | CSS for better alignment in the About Us section, using `align-self: center` for all classes beginning with `col-` inside the `.section-about-us` class. |
 | `10-article.html` | New starter file for the article, which will include the `hero-homepage` class. |
 | `10-styles.css`   | CSS for updating hero styles, moving declarations to `.hero-homepage`, and modifying `.section-hero` and `.section-body` properties. |
-| `11-article.html` |                                                              |
-| `11-styles.css`   |                                                              |
+| `11-article.html` | Adds the `hero-article` class to the `<header>`, a background image, a `section-category` span with text "Digital Life", and an `h1` with class `section-title` and text "Ut alios omittam, hunc appello, quem ille unum secutus est". |
+| `11-styles.css`   | CSS for the `hero-article` class with background properties, `before` pseudo-element, and alignment for `section-inner`and `section-body`. |
 | `12-article.html` |                                                              |
 | `12-styles.css`   |                                                              |
 | `13-article.html` |                                                              |
