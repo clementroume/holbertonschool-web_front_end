@@ -31,8 +31,8 @@ The `flexbox` directory includes the following files:
 | `0-index.html`    | Starter HTML file for setting up Flexbox. Demonstrates the transition from float-based layouts to Flexbox. |
 | `0-styles.css`    | CSS file introducing `display: flex` and its effects on direct child elements. |
 | `1-index.html`    | Adds specific classes to sections for better organization and styling. |
-| `1-styles.css`    | CSS file identical to `0-styles.css`, shared for continuity in this step. |
-| `2-index.html`    | Same as `1-index.html` (no changes made to the HTML file).   |
+| `1-styles.css`    | No changes made to the CSS file.                             |
+| `2-index.html`    | No changes made to the HTML file.                            |
 | `2-styles.css`    | CSS demonstrating how `flex-direction` affects layout structure, reversing the order of "Latest news" cards. |
 | `3-index.html`    | Simplifies the services list by removing the second `ul` and placing the 3 list items under the first `ul`. |
 | `3-styles.css`    | CSS for wrapping elements within a row using `flex-wrap: wrap`. |
@@ -40,8 +40,8 @@ The `flexbox` directory includes the following files:
 | `4-styles.css`    | CSS implementing width adjustments with `calc()`, margin updates, and modifying spacing between flex service items |
 | `5-index.html`    | Wrap the `div` with class `header-logo` and the `nav` with class `navbar-menu` inside a `div` with the class `header-container`. |
 | `5-styles.css`    | CSS showcasing `display: flex` and `justify-content: space-between` for `.header-container`; removes old rules for `header-logo` and `navbar-menu`. |
-| `6-index.html`    | Flexifies the navbar for horizontal alignment of items.      |
-| `6-styles.css`    | CSS demonstrating flex alignment within the navigation bar.  |
+| `6-index.html`    | No changes made to the HTML file.                            |
+| `6-styles.css`    | CSS demonstrating `display: flex` for the `nav` class and adjustments to `.nav-item` margins and variables. |
 | `7-index.html`    | Centers logo and navbar items using `align-items: center`.   |
 | `7-styles.css`    | CSS focusing on vertical alignment in Flexbox containers.    |
 | `8-index.html`    | Simplifies the hero banner layout with Flexbox properties like `flex-direction` and `justify-content`. |
