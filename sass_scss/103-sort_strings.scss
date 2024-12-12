@@ -1,71 +1,58 @@
-/* 
-  Task 103: Sort a list of strings using a custom sorting order
-  This file demonstrates how to sort a list of strings based on a custom alphabetical order.
-  - A default order of letters from 'a' to 'z' is defined.
-  - The `_str-compare` function compares two strings to determine their relative order.
-  - The `quick-sort` function recursively sorts a list using the `_str-compare` function.
-  - The sorted list is then output using `@debug`.
-  Solution found at this address: "https://www.geeksforgeeks.org/sorting-function-in-sass/"
-*/
+/**/
+@use 'sass:string';
+@use 'sass:list';
+@use '103-sort_list' as *; // Import the list of strings to sort
 
-@import '103-sort_list'; // Import the list of strings to sort
-
-// Default sort order: defines the custom order for sorting characters
 $sort-order: a b c d e f g h i j k l m n o p q r s t u v w x y z !default;
 
-// Function: Compare two strings based on the custom sort order
 @function compare($string1, $string2, $sort-order) {
-  // Normalize strings to lowercase for case-insensitive comparison
-  $string1: to-lower-case($string1 + unquote(''));
-  $string2: to-lower-case($string2 + unquote(''));
+  $string1: str-to-lower-case($string1);
+  $string2: str-to-lower-case($string2);
 
-  // Compare character by character
-  @for $i from 1 through min(str-length($string1), str-length($string2)) {
-    $char1: str-slice($string1, $i, $i);
-    $char2: str-slice($string2, $i, $i);
+  @for $i from 1 through min(string.length($string1), string.length($string2)) {
+    $char1: string.slice($string1, $i, $i);
+    $char2: string.slice($string2, $i, $i);
 
-    // If characters are found and their positions in the sort order differ
     @if $char1 and
       $char2 and
-      index($sort-order, $char1) !=
-      index($sort-order, $char2)
+      list.index($sort-order, $char1) !=
+      list.index($sort-order, $char2)
     {
-      // Return true if $char1 comes before $char2 in the custom sort order
-      @return index($sort-order, $char1) < index($sort-order, $char2);
+      @return list.index($sort-order, $char1) < list.index($sort-order, $char2);
     }
   }
 
-  // If strings are identical up to the shorter one's length, compare lengths
-  @return str-length($string1) < str-length($string2);
+  @return string.length($string1) < string.length($string2);
 }
 
-// Function: Swap two elements in a list
 @function swap($list, $index1, $index2) {
-  // Ensure indices are within bounds
-  @if abs($index1) > length($list) or abs($index2) > length($list) {
+  @if abs($index1) > list.length($list) or abs($index2) > list.length($list) {
     @return $list;
   }
 
-  // Swap elements at $index1 and $index2
-  $temp: nth($list, $index1); // Temporarily store the value at $index1
-  $list: set-nth(
+  $temp: list.nth($list, $index1);
+  $list: list.set-nth(
     $list,
     $index1,
-    nth($list, $index2)
+    list.nth($list, $index2)
   ); // Replace $index1 with $index2
-  $list: set-nth($list, $index2, $temp); // Replace $index2 with the temp value
+  $list: list.set-nth(
+    $list,
+    $index2,
+    $temp
+  ); // Replace $index2 with the temp value
   @return $list;
 }
 
-// Function: Sort a list using a bubble sort algorithm
 @function sort($list, $sort-order) {
-  // Loop through each element in the list
-  @for $i from 1 through length($list) {
+  @for $i from 1 through list.length($list) {
     // Traverse the list backward, comparing adjacent elements
     @for $j from $i * -1 through -1 {
       $j: abs($j); // Convert negative indices to positive
-      // Compare adjacent elements and swap if they are out of order
-      @if $j > 1 and compare(nth($list, $j), nth($list, $j - 1), $sort-order) {
+      @if $j >
+        1 and
+        compare(list.nth($list, $j), list.nth($list, $j - 1), $sort-order)
+      {
         $list: swap($list, $j, $j - 1);
       }
     }
@@ -74,4 +61,4 @@ $sort-order: a b c d e f g h i j k l m n o p q r s t u v w x y z !default;
 }
 
 // Debug the sorted result for a given list
-@debug sort($list_to_sort, $sort-order);
+@debug sort($list-to-sort, $sort-order);
