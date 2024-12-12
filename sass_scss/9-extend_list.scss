@@ -1,12 +1,4 @@
-/* 
-  Task 9: Extend list
-  This Sass file demonstrates the use of the `@extend` directive to share styles between multiple classes.
-  The `.info` class defines a common style (font size 12px), 
-  and both the `.success` and `.warning` classes extend `.info` to inherit this font size.
-  Additionally, custom text colors are applied to the `.success` and `.warning` classes: 
-  green for `.success` and red for `.warning`.
-*/
-
+/* Task 9: Extend list This Sass file demonstrates the use of the `@extend` directive to share styles between multiple classes. The `.info` class defines a common style (font size 12px), and both the `.success` and `.warning` classes extend `.info` to inherit this font size. Additionally, custom text colors are applied to the `.success` and `.warning` classes: green for `.success` and red for `.warning`.*/
 .info {
   font-size: 12px; // Common font size for all classes
 }

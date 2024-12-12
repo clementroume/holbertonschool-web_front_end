@@ -1,0 +1,53 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 80vw;
+  height: 20vh;
+  justify-content: space-around;
+}
+
+.box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+.box1 {
+  background-color: red;
+  width: 25%;
+  height: 25%;
+}
+
+.box2 {
+  background-color: green;
+  flex-grow: 2;
+  width: 50%;
+  height: 50%;
+}
+.box3 {
+  background-color: yellow;
+  flex-grow: 3;
+  width: 75%;
+  height: 75%;
+}
+.box4 {
+  background-color: blue;
+  flex-grow: 2;
+  width: 50%;
+  height: 50%;
+}
+.box5 {
+  background-color: blueviolet;
+  flex-grow: 1;
+  width: 25%;
+  height: 25%;
+}

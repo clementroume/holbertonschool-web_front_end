@@ -60,8 +60,8 @@ The `flexbox` directory includes the following files:
 | `14-styles.css`    | No changes made to the CSS file.                             |
 | `100-article.html` | Adds content to the `post-content` article, including multiple paragraphs, headings, lists, a figure with an image and caption, a blockquote, and a styled hyperlink. |
 | `100-styles.css`   | Styles images inside the `post` class, the first paragraph in `post-content`, and the `img-caption` class. |
-| `101-index.html`   |                                                              |
-| `101-style.css`    |                                                              |
+| `101-index.html`   | Provides the HTML structure for the Timemachine boxes layout, containing a container with five colored boxes. |
+| `101-style.css`    | Creates a flexbox layout for a set of boxes with custom colors, ensuring the layout matches the provided example without using float, text-align, margin, or padding |
 
 ---
 
