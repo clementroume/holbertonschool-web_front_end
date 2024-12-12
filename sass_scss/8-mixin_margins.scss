@@ -1,4 +1,11 @@
-/* Task 8: Margin mixin This Sass file defines a mixin called `margin`, which sets the left and right margins for an element. The mixin accepts a parameter `$margin` with a default value of 10px. The mixin is then included in the `body` with the default margin value, and in the `div` with a custom margin of 15px. */
+/* 
+  Task 8: Margin mixin
+  This Sass file defines a mixin called `margin`, which sets the left and right margins for an element. 
+  The mixin accepts a parameter `$margin` with a default value of 10px. 
+  The mixin is then included in the `body` with the default margin value, 
+  and in the `div` with a custom margin of 15px.
+*/
+
 @mixin margin($margin: 10px) {
   margin-left: $margin;
   margin-right: $margin;

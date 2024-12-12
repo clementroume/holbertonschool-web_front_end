@@ -1,4 +1,11 @@
-/* Task 10: Import colors This Sass file demonstrates how to use the `@import` directive to import variables from another Sass file. It imports color variables (`$red`, `$green`, `$blue`) defined in the `10-colors.scss` file and applies them to respective classes (`.red`, `.green`, and `.blue`). The colors are then applied as the text color for each class. */
+/* 
+  Task 10: Import colors
+  This Sass file demonstrates how to use the `@import` directive to import variables from another Sass file.
+  It imports color variables (`$red`, `$green`, `$blue`) defined in the `10-colors.scss` file 
+  and applies them to respective classes (`.red`, `.green`, and `.blue`).
+  The colors are then applied as the text color for each class.
+*/
+
 @import '10-colors'; // Import color variables from the '10-colors.scss' file
 
 .red {
