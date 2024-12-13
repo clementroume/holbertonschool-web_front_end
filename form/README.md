@@ -32,12 +32,12 @@ The `form` directory includes the following files:
 
 | File              | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| 00-article.html   | Starter HTML file.                                           |
-| 00-styles.css     | Starter CSS file.                                            |
+| `00-article.html` | Starter HTML file.                                           |
+| `00-styles.css`   | Starter CSS file.                                            |
 | `01-article.html` | HTML file that creates a new section (`post-comments`) with a heading and a form for leaving comments. It also includes a message indicating that all fields are required. |
 | `01-styles.css`   | CSS file that styles the `post-comments` section, including layout adjustments and basic form styling. Focuses on the width, margin, padding, and font settings. |
-|                   |                                                              |
-|                   |                                                              |
+| `02-article.html` | HTML file that extends the previous comment form by adding two fieldsets for personal information and comment, each containing multiple `div` elements for structuring input fields. |
+| `02-styles.css`   | CSS file that styles the `fieldset` elements to use `flex` display, with specific properties for padding, layout direction, and border removal. |
 |                   |                                                              |
 |                   |                                                              |
 
