@@ -38,8 +38,16 @@ The `form` directory includes the following files:
 | `01-styles.css`   | CSS file that styles the `post-comments` section, including layout adjustments and basic form styling. Focuses on the width, margin, padding, and font settings. |
 | `02-article.html` | HTML file that extends the previous comment form by adding two fieldsets for personal information and comment, each containing multiple `div` elements for structuring input fields. |
 | `02-styles.css`   | CSS file that styles the `fieldset` elements to use `flex` display, with specific properties for padding, layout direction, and border removal. |
-|                   |                                                              |
-|                   |                                                              |
+| `03-article.html` | HTML file that enhances the form by adding labels and input containers for each field, using `div`elements with appropriate classes to structure the form and a button for submitting the comment. |
+| `03-styles.css`   | CSS file that styles the `label` elements to improve user interaction, including pointer cursor, block display, and specific font sizing and padding. It also includes hover styles for the submit button. |
+| `04-article.html` |                                                              |
+| `04-styles.css`   |                                                              |
+| `05-article.html` |                                                              |
+| `05-styles.css`   |                                                              |
+| `06-article.html` |                                                              |
+| `06-styles.css`   |                                                              |
+| `07-article.html` |                                                              |
+| `07-styles.css`   |                                                              |
 
 ---
 
