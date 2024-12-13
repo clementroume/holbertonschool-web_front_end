@@ -46,8 +46,8 @@ The `form` directory includes the following files:
 | `05-styles.css`   | CSS file that styles the help messages and form fields. It includes properties for form group padding and margin, background color, focus state transitions, and styling for the help text to make it more readable and accessible. |
 | `06-article.html` | HTML file that remains unchanged in this step. It utilizes the validation and error handling styles from the corresponding CSS file to display the error and success messages when the form inputs are valid or invalid. |
 | `06-styles.css`   | CSS file that adds custom properties for error and success colors, as well as styles for error handling in form fields. This includes custom icons for valid and invalid inputs, and adjustments to the visual appearance of the form fields based on their validation state. |
-| `07-article.html` |                                                              |
-| `07-styles.css`   |                                                              |
+| `07-article.html` | HTML file that adds a search form inside the navigation. The form contains an input field for search queries and a button with an SVG search icon. The form allows users to search through the site content. |
+| `07-styles.css`   | CSS file that styles the newly added search form. It includes properties for the search input, button, and icon, as well as animations for the input field's width during focus and interaction. |
 
 ---
 
