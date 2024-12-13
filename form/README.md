@@ -42,8 +42,8 @@ The `form` directory includes the following files:
 | `03-styles.css`   | CSS file that styles the `label` elements to improve user interaction, including pointer cursor, block display, and specific font sizing and padding. It also includes hover styles for the submit button. |
 | `04-article.html` | HTML file that completes the form by adding input fields for first name, last name, email, title, and a textarea for the comment, each with appropriate attributes such as pattern, placeholder, and required validation. |
 | `04-styles.css`   | CSS file that styles the input fields and textarea, setting common properties like padding, border, background color, and box-shadow. It also includes custom focus styles and placeholder styling for better visual presentation. |
-| `05-article.html` |                                                              |
-| `05-styles.css`   |                                                              |
+| `05-article.html` | HTML file that adds help messages under each form field with the class `form-help`. The help messages provide additional guidance on the required input for fields such as first name, last name, title, and comment. |
+| `05-styles.css`   | CSS file that styles the help messages and form fields. It includes properties for form group padding and margin, background color, focus state transitions, and styling for the help text to make it more readable and accessible. |
 | `06-article.html` |                                                              |
 | `06-styles.css`   |                                                              |
 | `07-article.html` |                                                              |
