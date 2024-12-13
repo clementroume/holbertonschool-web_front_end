@@ -44,8 +44,8 @@ The `form` directory includes the following files:
 | `04-styles.css`   | CSS file that styles the input fields and textarea, setting common properties like padding, border, background color, and box-shadow. It also includes custom focus styles and placeholder styling for better visual presentation. |
 | `05-article.html` | HTML file that adds help messages under each form field with the class `form-help`. The help messages provide additional guidance on the required input for fields such as first name, last name, title, and comment. |
 | `05-styles.css`   | CSS file that styles the help messages and form fields. It includes properties for form group padding and margin, background color, focus state transitions, and styling for the help text to make it more readable and accessible. |
-| `06-article.html` |                                                              |
-| `06-styles.css`   |                                                              |
+| `06-article.html` | HTML file that remains unchanged in this step. It utilizes the validation and error handling styles from the corresponding CSS file to display the error and success messages when the form inputs are valid or invalid. |
+| `06-styles.css`   | CSS file that adds custom properties for error and success colors, as well as styles for error handling in form fields. This includes custom icons for valid and invalid inputs, and adjustments to the visual appearance of the form fields based on their validation state. |
 | `07-article.html` |                                                              |
 | `07-styles.css`   |                                                              |
 
