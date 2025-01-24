@@ -1,6 +1,6 @@
 # Flexbox - Holberton School
 
-Welcome to the **Flexbox** project repository! This project is part of the **Holberton School Web Front-End** curriculum, focused on mastering CSS Flexbox for creating flexible, responsive, and modern web layouts.
+Welcome to the **Flexbox** project repository! This project is part of the **Holberton School Full-Stack** curriculum, focused on mastering CSS Flexbox for creating flexible, responsive, and modern web layouts.
 
 ---
 

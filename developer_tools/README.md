@@ -1,6 +1,6 @@
 # Developer tools - Holberton School
 
-Welcome to the **Developer Tools** project repository! This project is part of the **Holberton School Web Front-End** curriculum, which focuses on building webpages using semantic HTML, based on a designer's specifications.
+Welcome to the **Developer Tools** project repository! This project is part of the **Holberton School Full-Stack** curriculum, focusing on using browser developer tools to analyze, manipulate, and optimize webpages effectively.
 
 ---
 
@@ -14,7 +14,7 @@ Welcome to the **Developer Tools** project repository! This project is part of t
 
 ## Description
 
-This project involves analyzing the website [DevTools Example](https://dev-tools.hbtn.info/) using browser developer tools. The objective is to explore various aspects of web development, including inspecting elements, changing styles, running JavaScript snippets, and more.
+This project focuses on leveraging browser **Developer Tools** to analyze and manipulate web pages. By working through a series of tasks, you will learn how to inspect HTML, modify CSS, run JavaScript snippets, debug, and optimize page performance. The project includes exploring features such as auditing, network insights, performance analysis, and accessibility checks, providing valuable skills for web development.
 
 ---
 
@@ -64,40 +64,19 @@ The `developer_tools` directory includes the following files:
 
 ## Learning Objectives
 
-By the end of this project, the following concepts should be clearly understood and explainable without external assistance.
+By the end of this project, the following concepts should be clearly understood and explainable without external assistance:
 
-### Developer Tools Basics
-
-- The purpose and functionality of Developer Tools in browsers.
-- How to open Developer Tools in Chrome, Firefox, Safari, and Edge.
-
-### Elements and Styles
-
-- How to use the "Elements" tab to edit HTML and CSS.
-- How to force element states like hover.
-
-### Auditing and Snippets
-
-- How to audit a page using the suggestions provided by Lighthouse.
-- How to create and run snippets on a page.
-
-### Debugging and Network Insights
-
-- How to retrieve information about files and server configurations.
-- How to block network requests and analyze XHR calls.
-
-### Performance and Security
-
-- How to determine the amount of JavaScript or CSS used on a page.
-- How to detect 404 errors and manage static assets.
-
-### Accessibility and SEO
-
-- How to analyze the accessibility of a page.
-- How to run SEO audits and identify improvement areas.
-
-### Moving Elements
-
-- How to move elements within a webpage using Developer Tools.
+- The purpose and functionality of **Developer Tools** in browsers.
+- How to open **Developer Tools** in Chrome, Firefox, Safari, and Edge.
+- How to use the "Elements" tab to inspect and modify **HTML** and **CSS**.
+- How to force element states, such as **hover**, using Developer Tools.
+- How to run **JavaScript snippets** on a webpage.
+- How to audit a page using **Lighthouse** for performance, accessibility, and SEO.
+- How to retrieve information about server configurations and network requests.
+- The process of debugging **JavaScript** and **CSS** issues using Developer Tools.
+- The ability to analyze performance and security metrics, including **static assets** and **network requests**.
+- How to detect **404 errors** and manage **static assets**.
+- How to analyze and improve **page accessibility** and **SEO** using Developer Tools.
+- How to move and manipulate elements within a webpage using Developer Tools.
 
 ---

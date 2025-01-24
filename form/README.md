@@ -1,6 +1,6 @@
 # Forms - Holberton School  
 
-Welcome to the **Forms** project repository! This project is part of the **Holberton School Web Front-End** curriculum, focusing on mastering HTML5 forms and CSS styling to create accessible and functional form interfaces for modern web applications.  
+Welcome to the **Forms** project repository! This project is part of the **Holberton School Full-Stack** curriculum, focusing on mastering HTML5 forms and CSS styling to create accessible and functional form interfaces for modern web applications.  
 
 ---
 
