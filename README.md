@@ -21,6 +21,7 @@ This repository contains multiple projects that help build a strong foundation i
 - **Sass & Scss**: Discover the power of Sass and Scss, CSS preprocessors that enhance the organization and maintainability of CSS files.
 - **Developer Tools**: Learn to use browser developer tools to inspect, debug, and optimize web applications.
 - **Responsive Web Design**: Implement responsive web design techniques to ensure websites are adaptable to various screen sizes and devices.
+- **Accessibility**: Ensure web pages are accessible to all users, including those with disabilities, following WCAG guidelines, ARIA standards, and best practices.
 
 The tasks in this repository gradually increase in complexity, providing practical scenarios to explore best practices and optimize workflows.
 
@@ -37,6 +38,7 @@ Here’s an overview of the directories included in the repository:
 |`sass_scss`|This project introduces the CSS preprocessor Sass and its features like variables, mixins, and loops to improve CSS functionality.|
 |`developer_tools`|This project involves analyzing and using developer tools, specifically from [this website](https://dev-tools.hbtn.info/).|
 |`responsive_design`|This project introduces the principles of responsive web design, including mobile-first design and the use of CSS media queries to create adaptable layouts.|
+|`accessibility`|This project focuses on making web pages accessible to all users by implementing WCAG guidelines, ARIA roles and attributes, improving keyboard navigation, and ensuring screen reader compatibility. It involves testing web content with accessibility tools and ensuring compliance with accessibility standards.|
 
 ---
 
@@ -45,35 +47,41 @@ Here’s an overview of the directories included in the repository:
 By the end of this repository, the following concepts should be clearly understood and mastered:
 
 - **Flexbox**:
-    
-    - Understand how to build responsive layouts using CSS Flexbox.
-    - Align and distribute items using Flexbox properties like `justify-content`, `align-items`, `flex-direction`, and more.
-    - Learn how to manage layout challenges using Flexbox in one-dimensional space.
+
+  - Understand how to build responsive layouts using CSS Flexbox.
+  - Align and distribute items using Flexbox properties like `justify-content`, `align-items`, `flex-direction`, and more.
+  - Learn how to manage layout challenges using Flexbox in one-dimensional space.
 - **Forms**:
-    
-    - Structure HTML5 forms for various use cases (e.g., comments, search forms).
-    - Choose and implement appropriate input types (e.g., text, email, textarea).
-    - Apply form validation using regular expressions and HTML attributes.
-    - Style form elements to provide visual feedback on validity, required fields, and states.
-    - Ensure forms are usable and accessible, following best practices for user experience.
+
+  - Structure HTML5 forms for various use cases (e.g., comments, search forms).
+  - Choose and implement appropriate input types (e.g., text, email, textarea).
+  - Apply form validation using regular expressions and HTML attributes.
+  - Style form elements to provide visual feedback on validity, required fields, and states.
+  - Ensure forms are usable and accessible, following best practices for user experience.
 - **Sass & Scss**:
-    
-    - Understand the differences between Sass and Scss syntax.
-    - Use variables, mixins, and functions to enhance and modularize CSS.
-    - Write clean, maintainable CSS with loops, inheritance, and conditional statements in Sass.
-    - Leverage Sass features like `@import`, `@use`, and `@extend` to improve code structure.
+
+  - Understand the differences between Sass and Scss syntax.
+  - Use variables, mixins, and functions to enhance and modularize CSS.
+  - Write clean, maintainable CSS with loops, inheritance, and conditional statements in Sass.
+  - Leverage Sass features like `@import`, `@use`, and `@extend` to improve code structure.
 - **Developer Tools**:
-    
-    - Learn how to use browser developer tools for inspecting, debugging, and optimizing websites.
-    - Understand how to use the console, network, and performance tabs to improve the development process.
+
+  - Learn how to use browser developer tools for inspecting, debugging, and optimizing websites.
+  - Understand how to use the console, network, and performance tabs to improve the development process.
 - **Responsive Web Design**:
-    
-    - Implement **mobile-first design** principles using CSS.
-    - Use **CSS media queries** to adapt styles for different screen sizes.
-    - Utilize flexible CSS units like `rem`, `em`, `%`, `vh`, `vw` to create fluid layouts.
-    - Optimize typography for readability across devices.
-    - Implement responsive navigation menus and optimize images for different screen sizes.
-    - Understand the difference between **responsive design** and **adaptive design**.
-    - Use breakpoints effectively to target specific screen widths.
+
+  - Implement **mobile-first design** principles using CSS.
+  - Use **CSS media queries** to adapt styles for different screen sizes.
+  - Utilize flexible CSS units like `rem`, `em`, `%`, `vh`, `vw` to create fluid layouts.
+  - Optimize typography for readability across devices.
+  - Implement responsive navigation menus and optimize images for different screen sizes.
+  - Understand the difference between **responsive design** and **adaptive design**.
+  - Use breakpoints effectively to target specific screen widths.
+- **Accessibility**:
+
+  - Understand and implement **WCAG** guidelines for web accessibility.
+  - Use **ARIA** roles, landmarks, and attributes to improve web content for screen readers.
+  - Ensure web pages are navigable via keyboard and compliant with accessibility standards.
+  - Conduct accessibility testing using tools like Axe and screen readers to identify and resolve issues.
 
 These projects will help build proficiency in the key tools and techniques required to develop modern web applications.
