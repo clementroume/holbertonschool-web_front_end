@@ -49,6 +49,7 @@ The `accessibility` directory includes the following files:
 | `fix-a11y/03-index.html`     | HTML file where the `lang` attribute is added to the `<html>` tag.                    |
 | `fix-a11y/04-index.html`     | HTML file where alternate text (alt attributes) are added to images.                  |
 | `fix-a11y/05-index.html`     | HTML file where form elements are updated with labels and accessibility improvements. |
+| `fix-a11y/06-index.html`     | HTML file where aria-labels are added to links with icons for better accessibility.   |
 
 
 ---  
