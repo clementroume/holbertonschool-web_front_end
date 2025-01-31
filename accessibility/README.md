@@ -33,12 +33,17 @@ By following these principles, the project aims to produce **barrier-free** web 
 
 The `accessibility` directory includes the following files:  
 
-| File                     | Description                                                                                     |
-| ------------------------ | ----------------------------------------------------------------------------------------------- |
-| `00-index.html`          | Initial HTML file containing the base structure of the project.                                 |
-| `00-styles.css`          | Initial CSS file defining the base styling.                                                     |
-| `keyboard/01-index.html` | HTML file containing the structure for keyboard accessibility improvements.                     |
-| `keyboard/01-styles.css` | CSS file implementing accessibility fixes for the "Works" section focus behavior.               |
+| File                         | Description                                                                       |
+| ---------------------------- | --------------------------------------------------------------------------------- |
+| `00-index.html`              | Initial HTML file containing the base structure of the project.                   |
+| `00-styles.css`              | Initial CSS file defining the base styling.                                       |
+| `keyboard/01-index.html`     | HTML file containing the structure for keyboard accessibility improvements.       |
+| `keyboard/01-styles.css`     | CSS file implementing accessibility fixes for the "Works" section focus behavior. |
+| `00-article.html`            | HTML file for implementing skip links on the article page.                        |
+| `skip-links/01-index.html`   | HTML file implementing skip links functionality for easier navigation.            |
+| `skip-links/01-article.html` | HTML file for applying the skip links feature to the article page.                |
+| `skip-links/01-styles.css`   | CSS file implementing the visual and interactive styles for skip links.           |
+
 
 ---  
 
