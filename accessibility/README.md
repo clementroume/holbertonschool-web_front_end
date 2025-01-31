@@ -51,6 +51,7 @@ The `accessibility` directory includes the following files:
 | `fix-a11y/05-index.html`     | HTML file where form elements are updated with labels and accessibility improvements.              |
 | `fix-a11y/06-index.html`     | HTML file where aria-labels are added to links with icons for better accessibility.                |
 | `fix-a11y/07-index.html`     | HTML file where the `user-scalable=no` is removed from the meta viewport for better accessibility. |
+| `fix-a11y/08-index.html`     | HTML file where heading levels are adjusted for proper document structure and landmarks are added. |
 
 
 ---  
