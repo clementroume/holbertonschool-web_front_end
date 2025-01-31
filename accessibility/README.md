@@ -53,6 +53,7 @@ The `accessibility` directory includes the following files:
 | `fix-a11y/07-index.html`     | HTML file where the `user-scalable=no` is removed from the meta viewport for better accessibility.                  |
 | `fix-a11y/08-index.html`     | HTML file where heading levels are adjusted for proper document structure and landmarks are added.                  |
 | `fix-a11y/09-index.html`     | HTML file where proper landmark elements (header, main, nav, section, footer) are applied to enhance accessibility. |
+| `fix-a11y/10-index.html`     | HTML file where nav and div elements are transformed into proper list structures for better accessibility.          |
 
 
 ---  
