@@ -33,25 +33,26 @@ By following these principles, the project aims to produce **barrier-free** web 
 
 The `accessibility` directory includes the following files:  
 
-| File                         | Description                                                                                        |
-| ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| `00-index.html`              | Initial HTML file containing the base structure of the project.                                    |
-| `00-styles.css`              | Initial CSS file defining the base styling.                                                        |
-| `keyboard/01-index.html`     | HTML file containing the structure for keyboard accessibility improvements.                        |
-| `keyboard/01-styles.css`     | CSS file implementing accessibility fixes for the "Works" section focus behavior.                  |
-| `00-article.html`            | HTML file for implementing skip links on the article page.                                         |
-| `skip-links/01-index.html`   | HTML file implementing skip links functionality for easier navigation.                             |
-| `skip-links/01-article.html` | HTML file for applying the skip links feature to the article page.                                 |
-| `skip-links/01-styles.css`   | CSS file implementing the visual and interactive styles for skip links.                            |
-| `fix-a11y/00-index.html`     | Starter HTML file for the accessibility contrast task.                                             |
-| `fix-a11y/01-index.html`     | HTML file where the contrast issue is fixed by removing body styles.                               |
-| `fix-a11y/02-index.html`     | HTML file with the addition of the `<title>` element for improved navigation.                      |
-| `fix-a11y/03-index.html`     | HTML file where the `lang` attribute is added to the `<html>` tag.                                 |
-| `fix-a11y/04-index.html`     | HTML file where alternate text (alt attributes) are added to images.                               |
-| `fix-a11y/05-index.html`     | HTML file where form elements are updated with labels and accessibility improvements.              |
-| `fix-a11y/06-index.html`     | HTML file where aria-labels are added to links with icons for better accessibility.                |
-| `fix-a11y/07-index.html`     | HTML file where the `user-scalable=no` is removed from the meta viewport for better accessibility. |
-| `fix-a11y/08-index.html`     | HTML file where heading levels are adjusted for proper document structure and landmarks are added. |
+| File                         | Description                                                                                                         |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `00-index.html`              | Initial HTML file containing the base structure of the project.                                                     |
+| `00-styles.css`              | Initial CSS file defining the base styling.                                                                         |
+| `keyboard/01-index.html`     | HTML file containing the structure for keyboard accessibility improvements.                                         |
+| `keyboard/01-styles.css`     | CSS file implementing accessibility fixes for the "Works" section focus behavior.                                   |
+| `00-article.html`            | HTML file for implementing skip links on the article page.                                                          |
+| `skip-links/01-index.html`   | HTML file implementing skip links functionality for easier navigation.                                              |
+| `skip-links/01-article.html` | HTML file for applying the skip links feature to the article page.                                                  |
+| `skip-links/01-styles.css`   | CSS file implementing the visual and interactive styles for skip links.                                             |
+| `fix-a11y/00-index.html`     | Starter HTML file for the accessibility contrast task.                                                              |
+| `fix-a11y/01-index.html`     | HTML file where the contrast issue is fixed by removing body styles.                                                |
+| `fix-a11y/02-index.html`     | HTML file with the addition of the `<title>` element for improved navigation.                                       |
+| `fix-a11y/03-index.html`     | HTML file where the `lang` attribute is added to the `<html>` tag.                                                  |
+| `fix-a11y/04-index.html`     | HTML file where alternate text (alt attributes) are added to images.                                                |
+| `fix-a11y/05-index.html`     | HTML file where form elements are updated with labels and accessibility improvements.                               |
+| `fix-a11y/06-index.html`     | HTML file where aria-labels are added to links with icons for better accessibility.                                 |
+| `fix-a11y/07-index.html`     | HTML file where the `user-scalable=no` is removed from the meta viewport for better accessibility.                  |
+| `fix-a11y/08-index.html`     | HTML file where heading levels are adjusted for proper document structure and landmarks are added.                  |
+| `fix-a11y/09-index.html`     | HTML file where proper landmark elements (header, main, nav, section, footer) are applied to enhance accessibility. |
 
 
 ---  
