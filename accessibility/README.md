@@ -46,6 +46,7 @@ The `accessibility` directory includes the following files:
 | `fix-a11y/00-index.html`     | Starter HTML file for the accessibility contrast task.                            |
 | `fix-a11y/01-index.html`     | HTML file where the contrast issue is fixed by removing body styles.              |
 | `fix-a11y/02-index.html`     | HTML file with the addition of the `<title>` element for improved navigation.     |
+| `fix-a11y/03-index.html`     | HTML file where the `lang` attribute is added to the `<html>` tag.                |
 
 
 ---  
