@@ -23,7 +23,7 @@ The tasks in this project focus on:
 - Integrating **Components** such as buttons, alerts, and navigation bars.
 - Utilizing **Utilities** to fine-tune styling and layout.
 
-Only the **CSS** part of Bootstrap is used in this project—no JavaScript.
+Only the **CSS** part of Bootstrap is used in this project.
 
 ---
 
@@ -37,6 +37,9 @@ The `bootstrap` directory includes the following files:
 | `1-index.html` | Implements Bootstrap grid system to structure and style multiple rows of blocks, ensuring responsiveness with specific layout rules for different screen sizes. |
 | `2-index.html` | Implementation of a responsive web page using only Bootstrap classes, including a styled header, an alert section, and a responsive table with a dark theme.    |
 | `3-index.html` | Responsive card layout with Bootstrap, including a modal form.                                                                                                  |
+| `4-index.html` | Responsive tabbed navigation for Bob Dylan's biography and discography using Bootstrap, with collapsible album descriptions.                                    |
+| `5-index.html` | Responsive layout using Bootstrap utilities to show/hide elements based on screen width and style a three-column section with borders and shadows.              |
+| `6-styles.css` | Custom stylesheet that overrides Bootstrap's default styles, applying a new color scheme and border-radius to buttons, links, and card elements.                |
 
 ---
 
@@ -49,6 +52,7 @@ By the end of this project, the following concepts should be mastered:
 - Integrating **Components** to enhance user interfaces.
 - Leveraging **Utilities** for quick layout and style adjustments.
 - Designing modern, responsive pages without writing complex CSS.
+- Gaining proficiency in building **mobile-first** and **accessible** web pages efficiently.
 
 By using Bootstrap, this project enables the creation of clean and adaptive interfaces, streamlining web design without extensive custom CSS.
 
