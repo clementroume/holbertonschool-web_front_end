@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Getting Started with JSON Server",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "Understanding REST APIs",
+      "author": "Jane Doe"
+    },
+    {
+      "id": "3",
+      "title": "Building Fake APIs for Testing",
+      "author": "John Smith"
+    },
+    {
+      "id": "4",
+      "title": "Front-End Development Tips",
+      "author": "Alex Johnson"
+    },
+    {
+      "id": "5",
+      "title": "Exploring JSON Placeholder",
+      "author": "Emily Carter"
+    },
+    {
+      "id": "6",
+      "title": "Introduction to Fetch API",
+      "author": "Chris Lee"
+    },
+    {
+      "id": "7",
+      "title": "Asynchronous JavaScript Explained",
+      "author": "Pat Morgan"
+    },
+    {
+      "id": "8",
+      "title": "How to Use Promises in JS",
+      "author": "Taylor Reed"
+    },
+    {
+      "id": "9",
+      "title": "Beginner's Guide to jQuery",
+      "author": "Jordan Miles"
+    },
+    {
+      "id": "10",
+      "title": "Debugging JS Like a Pro",
+      "author": "Morgan Blake"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "Great intro to json-server!",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

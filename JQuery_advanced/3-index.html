@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 3</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+
+    <script type="application/javascript">
+        // Function that creates and appends a family tree table to the body
+        function createFamilyTree() {
+            const $table = $('<table></table>');
+
+            // Create the table header
+            const $thead = $('<thead></thead>')
+                .append($('<tr></tr>')
+                    .append($('<th></th>').text('Firstname'))
+                    .append($('<th></th>').text('Lastname'))
+                );
+
+            // Create the table body
+            const $tbody = $('<tbody></tbody>')
+                .append($('<tr></tr>')
+                    .append($('<td></td>').text('Guillaume'))
+                    .append($('<td></td>').text('Salva'))
+                )
+                .append($('<tr></tr>')
+                    .append($('<td></td>').text('Paulette'))
+                    .append($('<td></td>').text('Salva'))
+                )
+                .append($('<tr></tr>')
+                    .append($('<td></td>').text('Antoine'))
+                    .append($('<td></td>').text('Salva'))
+                );
+
+            // Assemble the full table and append to the body
+            $table.append($thead).append($tbody);
+            $('body').append($table);
+        }
+
+        // Execute once DOM is ready
+        $(document).ready(function () {
+            createFamilyTree();
+        });
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

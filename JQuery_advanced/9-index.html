@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 9</title>
+    <style>
+        .loading {
+            opacity: 0.2;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        // Global variable to store the current search term
+        let currentSearchTerm = "";
+
+        // Function to create the search form, result list, and pagination
+        function createSearchForm() {
+            const $form = $('<form></form>');
+            const $input = $('<input type="text" placeholder="Search Wikipedia" required>');
+            const $submit = $('<input type="submit" value="Submit">');
+            const $results = $('<ul></ul>').attr('id', 'results'); // List to display search results
+            const $pagination = $('<ul></ul>').attr('id', 'pagination'); // Pagination control
+
+            // Append input field, submit button, result list, and pagination list to the body
+            $form.append($input, $submit);
+            $('body').append($form, $results, $pagination);
+
+            // Event handler for form submission
+            $form.on('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission behavior
+                const query = $input.val().trim(); // Get the trimmed value from the input
+                if (query) {
+                    currentSearchTerm = query; // Store the current search term
+                    queryWikipedia(query); // Start querying Wikipedia with the current search term
+                }
+            });
+        }
+
+        // Function to add a new article to the results list
+        function addNewArticle(id, title, snippet) {
+            const $li = $('<li></li>'); // Create a new list item for the article
+            const $title = $('<p></p>').html(`<span>${id} - </span><b>${title}</b>`); // Title with ID
+            const $snippet = $('<p></p>').html(snippet); // Article snippet (brief description)
+
+            // Append the title and snippet to the list item, then append the list item to the results
+            $li.append($title, $snippet);
+            $('#results').append($li);
+        }
+
+        // Function to build the pagination control
+        function buildPagination(numberOfItems, itemsPerPage, currentOffset) {
+            const $pagination = $('#pagination');
+            $pagination.empty(); // Clear the previous pagination items
+
+            const totalPages = Math.ceil(numberOfItems / itemsPerPage); // Calculate the total number of pages
+            const currentPage = Math.floor(currentOffset / itemsPerPage) + 1; // Determine the current page number
+
+            // Loop through all pages and create pagination items
+            for (let i = 1; i <= totalPages; i++) {
+                const offset = (i - 1) * itemsPerPage; // Calculate the offset for each page
+                const $pageItem = $('<li></li>').text(i); // Create a list item for the page number
+
+                // Style the pagination items
+                $pageItem.css({
+                    cursor: 'pointer',
+                    marginLeft: '10px',
+                    fontWeight: i === currentPage ? 'bold' : 'normal',
+                    display: 'inline-block'
+                });
+
+                // Set up the click handler for the page item, except for the current page
+                if (i !== currentPage) {
+                    $pageItem.on('click', function () {
+                        queryWikipedia(currentSearchTerm, offset); // Fetch results for the selected page
+                    });
+                }
+
+                // Append the page item to the pagination
+                $pagination.append($pageItem);
+            }
+        }
+
+        // Function to handle the loading state
+        function displayLoading(loading) {
+            const $results = $('ul:first-of-type'); // Select the first <ul> element on the page
+
+            if (loading) {
+                // Wrap the <ul> element with a div and apply the 'loading' class for opacity effect
+                $results.wrap('<div class="loading"></div>');
+            } else {
+                // Unwrap the <ul> element and remove the 'loading' class (remove opacity)
+                $results.unwrap();
+            }
+        }
+
+        // Function to query Wikipedia API with search term and offset for pagination
+        function queryWikipedia(search, offset = 0) {
+            const apiUrl = "https://en.wikipedia.org/w/api.php"; // Wikipedia API endpoint
+            const data = {
+                action: "query",
+                list: "search",
+                srsearch: search, // Search query
+                sroffset: offset, // Pagination offset
+                format: "json", // Return data in JSON format
+                origin: "*" // This is necessary to handle CORS issues
+            };
+
+            // Call displayLoading function before making the API request
+            displayLoading(true); // Show loading indicator (set opacity)
+
+            // Perform an AJAX request to Wikipedia API
+            $.ajax({
+                url: apiUrl, // URL of the Wikipedia API
+                data: data, // Data to be sent with the request
+                dataType: "json", // Expected response type is JSON
+                success: function (response) {
+                    const results = response.query?.search || []; // Extract search results
+                    const totalHits = response.query?.searchinfo?.totalhits || 0; // Total number of results
+
+                    $('#results').empty(); // Clear previous results
+                    if (results.length === 0) {
+                        $('#results').append('<li>No results found.</li>'); // If no results, display a message
+                        $('#pagination').empty(); // Clear pagination if no results
+                        return;
+                    }
+
+                    // Loop through the results and add them to the page
+                    results.forEach(result => {
+                        addNewArticle(result.pageid, result.title, result.snippet);
+                    });
+
+                    // Build pagination based on the total hits and offset
+                    buildPagination(totalHits, 10, offset);
+
+                    // Call displayLoading again to remove loading opacity
+                    displayLoading(false); // Hide loading indicator
+                },
+                error: function (xhr, status, error) {
+                    console.error("API Error:", error); // Log any error from the API request
+                    $('#results').empty().append('<li>Error retrieving results.</li>'); // Display error message
+                }
+            });
+        }
+
+        // Call createSearchForm when the document is ready
+        $(document).ready(createSearchForm);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

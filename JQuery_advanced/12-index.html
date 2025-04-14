@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<!-- Set character encoding -->
+	<meta charset="utf-8" />
+	<title>Task 12</title>
+
+	<!-- Load jQuery library from CDN -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+	<script type="application/javascript">
+		// Function to create and display a post row in the DOM
+		function addPostRow(data) {
+
+			// Create a paragraph element containing post details
+			const postRow = `<p id="row-${data.id}">
+					<span class="delete" style="cursor: pointer;">(delete)</span>
+					<span>Post created with id ${data.id}, title: ${data.title}, author: ${data.author}</span>
+				</p>`;
+
+			// Append the post row to the body of the page
+			$('body').append(postRow);
+
+			// Attach the click event to the delete span
+			$(`#row-${data.id} .delete`).on('click', function () {
+				deletePost(data.id);
+			});
+		}
+
+		// Function to fetch and display all posts from the API
+		function listPosts() {
+			// Perform a GET request to the local JSON server
+			$.get('http://localhost:3000/posts')
+				.done(function (response) {
+					// For each post in the response, add it to the DOM
+					response.forEach((post) => {
+						addPostRow(post);
+					});
+				})
+				.fail(function () {
+					// If the request fails, show an alert
+					alert('Server Error');
+				});
+		}
+
+		function buildForm() {
+			// Create form element using jQuery to build the form dynamically
+			const $form = $('<form></form>');
+
+			// Create and append input fields for author and title
+			const $authorDiv = $('<div></div>').append(
+				$('<label></label>').attr('for', 'author').text('Author'),
+				$('<input>').attr('type', 'text').attr('id', 'author')
+			);
+
+			const $titleDiv = $('<div></div>').append(
+				$('<label></label>').attr('for', 'title').text('Title'),
+				$('<textarea></textarea>').attr('id', 'title')
+			);
+
+			// Create submit button
+			const $submitButton = $('<input>').attr('type', 'submit').attr('value', 'Submit');
+
+			// Append all elements to the form
+			$form.append($authorDiv, $titleDiv, $submitButton);
+
+			// Append the form to the body of the page
+			$('body').append($form);
+
+			// Attach a submit event handler to the form
+			$form.on('submit', function (event) {
+				event.preventDefault(); // Prevent default form submission behavior
+
+				// Get the values from the input fields
+				const author = $('#author').val().trim();
+				const title = $('#title').val().trim();
+
+				// Call sendForm with the trimmed values
+				sendForm(author, title);
+			});
+		}
+
+		// Function to send the form data to the server
+		function sendForm(author, title) {
+			// Show message that the query is being sent
+			$('body').after('<p>About to send the query to the API</p>');
+
+			// Create a data object with title and author
+			const data = { title: title, author: author };
+
+			// Fetch existing posts to determine the next id
+			$.get('http://localhost:3000/posts', function (response) {
+				// Find the highest current ID
+				const maxId = response.reduce((max, post) => post.id > max ? post.id : max, 0);
+
+				// Set the new post's ID to the maxId + 1
+				data.id = maxId + 1;
+
+				// Send a POST request to the server with the data, including the new ID
+				$.ajax({
+					url: 'http://localhost:3000/posts', // API endpoint for posts
+					type: 'POST', // HTTP method
+					contentType: 'application/json', // Specify the content type
+					data: JSON.stringify(data), // Stringify the data to JSON
+					success: function (response) {
+						// If the request is successful, add the post row with the returned data
+						addPostRow(response);
+					},
+					error: function () {
+						// If the request fails, display an error alert
+						alert('Error sending the POST query');
+					}
+				});
+			});
+		}
+
+		// Function to delete a post
+		function deletePost(id) {
+			$.ajax({
+				url: `http://localhost:3000/posts/${id}`, // API endpoint for deleting the post
+				type: 'DELETE', // HTTP method
+				success: function () {
+					// Remove the post row from the DOM if the delete is successful
+					$(`#row-${id}`).remove();
+				},
+				error: function () {
+					// If the delete fails, display an alert
+					alert('Post was not deleted');
+				}
+			});
+		}
+
+		// Once the DOM is fully loaded, list all posts
+		$(document).ready(function () {
+			listPosts();
+			buildForm();
+		});
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

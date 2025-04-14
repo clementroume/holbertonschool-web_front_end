@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<!-- Set character encoding -->
+	<meta charset="utf-8" />
+	<title>Task 10</title>
+
+	<!-- Load jQuery library from CDN -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+	<script type="application/javascript">
+		// Function to create and display a post row in the DOM
+		function addPostRow(data) {
+			// Create a paragraph element containing post details
+			const postRow = `<p>
+					<span>Post created with id ${data.id}, title: ${data.title}, author: ${data.author}</span>
+				</p>`;
+			// Append the post row to the body of the page
+			$('body').append(postRow);
+		}
+
+		// Function to fetch and display all posts from the API
+		function listPosts() {
+			// Perform a GET request to the local JSON server
+			$.get('http://localhost:3000/posts')
+				.done(function (response) {
+					// For each post in the response, add it to the DOM
+					response.forEach((post) => {
+						addPostRow(post);
+					});
+				})
+				.fail(function () {
+					// If the request fails, show an alert
+					alert('Server Error');
+				});
+		}
+
+		// Once the DOM is fully loaded, list all posts
+		$(document).ready(function () {
+			listPosts();
+		});
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

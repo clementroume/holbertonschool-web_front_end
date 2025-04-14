@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Task 7</title>
+
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script type="application/javascript">
+        // Function to create the search form and result container
+        function createSearchForm() {
+            // Create form elements: input field and submit button
+            const $form = $('<form></form>');
+            const $input = $('<input type="text" placeholder="Search Wikipedia" required>');
+            const $submit = $('<input type="submit" value="Submit">');
+            const $results = $('<ul></ul>').attr('id', 'results'); // Container for search results
+
+            // Append input and submit button to the form, then append the form and results list to the body
+            $form.append($input, $submit);
+            $('body').append($form, $results);
+
+            // Event handler for form submission
+            $form.on('submit', function (event) {
+                event.preventDefault(); // Prevent default form submission behavior
+                const query = $input.val().trim(); // Get search query and trim whitespace
+                if (query) {
+                    queryWikipedia(query); // If query is non-empty, initiate Wikipedia search
+                }
+            });
+        }
+
+        // Function to create and append new article results to the page
+        function addNewArticle(id, title, snippet) {
+            const $li = $('<li></li>'); // Create list item for article
+            const $title = $('<p></p>').html(`<span>${id} - </span><b>${title}</b>`); // Title with ID
+            const $snippet = $('<p></p>').html(snippet); // Snippet from Wikipedia
+
+            // Append title and snippet to the list item, then append the list item to the results list
+            $li.append($title, $snippet);
+            $('#results').append($li);
+        }
+
+        // Function to query the Wikipedia API for search results
+        function queryWikipedia(search) {
+            const apiUrl = "https://en.wikipedia.org/w/api.php"; // Wikipedia API endpoint
+            const data = {
+                action: "query",
+                list: "search",
+                srsearch: search, // The search query
+                format: "json", // Return data as JSON
+                origin: "*" // This is to handle CORS issues
+            };
+
+            // Make the AJAX request to the Wikipedia API
+            $.ajax({
+                url: apiUrl, // API endpoint
+                data: data, // Data to send in the request
+                dataType: "json", // Expecting a JSON response
+                success: function (response) {
+                    const results = response.query?.search || []; // Get search results (or empty array if none)
+                    $('#results').empty(); // Clear any existing results in the list
+
+                    // If no results are found, display a message
+                    if (results.length === 0) {
+                        $('#results').append('<li>No results found.</li>');
+                        return;
+                    }
+
+                    // Loop through each result and add it to the page
+                    results.forEach(result => {
+                        addNewArticle(result.pageid, result.title, result.snippet);
+                    });
+                },
+                error: function (xhr, status, error) {
+                    console.error("API Error:", error); // Log any error from the API request
+                    $('#results').empty().append('<li>Error retrieving results.</li>'); // Display error message
+                }
+            });
+        }
+
+        // Call createSearchForm when the document is ready
+        $(document).ready(createSearchForm);
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
