@@ -22,7 +22,9 @@ This repository contains multiple projects that help build a strong foundation i
 - **Bootstrap**: Leverage Bootstrap’s CSS framework to create responsive and professional web layouts with minimal custom styling.  
 - **Developer Tools**: Use browser developer tools to inspect, debug, and optimize web applications efficiently.  
 - **Flexbox**: Master CSS Flexbox to create flexible, responsive, and modern web layouts.  
-- **Forms**: Learn to create accessible, functional, and user-friendly HTML5 forms, along with styling techniques.  
+- **Forms**: Learn to create accessible, functional, and user-friendly HTML5 forms, along with styling techniques.
+- **JavaScript Advanced**: Dive into advanced JavaScript concepts like closures, callbacks, binding, and AJAX requests.
+- **jQuery Advanced**: Master advanced jQuery techniques for DOM manipulation, event handling, and AJAX integration.
 - **Responsive Web Design**: Implement responsive design techniques to ensure websites adapt seamlessly to different screen sizes and devices.  
 - **Sass & Scss**: Explore the power of Sass and Scss, CSS preprocessors that enhance the organization and maintainability of stylesheets.  
 
@@ -34,15 +36,17 @@ The tasks in this repository gradually increase in complexity, providing practic
 
 Here’s an overview of the directories included in the repository:  
 
-| **Directory**      | **Description**                                                                                                                           |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| `accessibility`    | This project ensures web pages are accessible by implementing WCAG guidelines, ARIA attributes, and improving keyboard navigation.        |
-| `bootstrap`        | This project utilizes Bootstrap 4.4 to build modern, responsive, and visually appealing web layouts using its grid system and components. |
-| `developer_tools`  | This project involves analyzing and using browser developer tools, specifically from [this website](https://dev-tools.hbtn.info/).        |
-| `flexbox`          | This project focuses on mastering the CSS Flexbox layout model to create responsive and flexible web designs.                             |
-| `forms`            | This project explores creating, styling, and validating HTML5 forms to build user-friendly and accessible interfaces.                     |
-| `responsive_design`| This project covers mobile-first design, CSS media queries, flexible units, and responsive layouts for various screen sizes.              |
-| `sass_scss`        | This project explores the CSS preprocessor Sass, covering variables, mixins, loops, and modularization for enhanced styling.              |
+| **Directory**         | **Description**                                                                                                                                                                  |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `accessibility`       | This project ensures web pages are accessible by implementing WCAG guidelines, ARIA attributes, and improving keyboard navigation.                                               |
+| `bootstrap`           | This project utilizes Bootstrap 4.4 to build modern, responsive, and visually appealing web layouts using its grid system and components.                                        |
+| `developer_tools`     | This project involves analyzing and using browser developer tools, specifically from [this website](https://dev-tools.hbtn.info/).                                               |
+| `flexbox`             | This project focuses on mastering the CSS Flexbox layout model to create responsive and flexible web designs.                                                                    |
+| `forms`               | This project explores creating, styling, and validating HTML5 forms to build user-friendly and accessible interfaces.                                                            |
+| `javascript_advanced` | This project explores advanced JavaScript concepts such as closures, callbacks, binding, and AJAX requests. Tasks include optimizing asynchronous behavior and making API calls. |
+| `jquery_advanced`     | This project focuses on advanced jQuery techniques, such as DOM manipulation, event handling, and AJAX integration using a local JSON server.                                    |
+| `responsive_design`   | This project covers mobile-first design, CSS media queries, flexible units, and responsive layouts for various screen sizes.                                                     |
+| `sass_scss`           | This project explores the CSS preprocessor Sass, covering variables, mixins, loops, and modularization for enhanced styling.                                                     |
 
 ---
 
@@ -78,6 +82,23 @@ By the end of this repository, the following concepts should be clearly understo
 - Structure HTML5 forms for diverse use cases.  
 - Implement various input types and apply validation techniques.  
 - Style forms for improved user experience and accessibility.  
+
+### **JavaScript Advanced**
+
+- Understand and manage the **execution stack** and **timing** of JavaScript functions.
+- Use **`setTimeout`** to manipulate the order of execution in the call stack.
+- Implement **closures** and **binding** functions to ensure the correct context (`this`).
+- **Make AJAX requests** using vanilla JavaScript to interact with external APIs, and **use callbacks** to handle asynchronous data retrieval and processing.
+
+### **jQuery Advanced**
+
+- Load jQuery from a CDN.
+- Create, modify, and insert DOM elements using jQuery.
+- Handle events and bind click handlers with jQuery.
+- Make AJAX requests (GET, POST, DELETE) to interact with APIs or JSON Server.
+- Wrap and unwrap elements dynamically.
+- Create a basic pagination system.
+- Build a responsive interface that updates dynamically based on server data.
 
 ### **Responsive Web Design**  
 
