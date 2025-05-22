@@ -19,8 +19,9 @@ Each directory in this repository focuses on a specific front-end topic, offerin
 This repository contains multiple projects that help build a strong foundation in web development. Topics covered include:  
 
 - **Accessibility**: Make web pages accessible to all users by following **WCAG** guidelines, implementing **ARIA** attributes, and ensuring usability for assistive technologies.  
-- **Bootstrap**: Leverage Bootstrap’s CSS framework to create responsive and professional web layouts with minimal custom styling.  
-- **Developer Tools**: Use browser developer tools to inspect, debug, and optimize web applications efficiently.  
+- **Bootstrap**: Leverage Bootstrap’s CSS framework to create responsive and professional web layouts with minimal custom styling.
+- **Cookies & Local Storage**: Learn to persist user data with cookies, localStorage, and sessionStorage for improved client-side experiences.
+- **Developer Tools**: Use browser developer tools to inspect, debug, and optimize web applications efficiently.
 - **Flexbox**: Master CSS Flexbox to create flexible, responsive, and modern web layouts.  
 - **Forms**: Learn to create accessible, functional, and user-friendly HTML5 forms, along with styling techniques.
 - **JavaScript Advanced**: Dive into advanced JavaScript concepts like closures, callbacks, binding, and AJAX requests.
@@ -40,6 +41,7 @@ Here’s an overview of the directories included in the repository:
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `accessibility`       | This project ensures web pages are accessible by implementing WCAG guidelines, ARIA attributes, and improving keyboard navigation.                                               |
 | `bootstrap`           | This project utilizes Bootstrap 4.4 to build modern, responsive, and visually appealing web layouts using its grid system and components.                                        |
+| `cookies_local_storage` | This project focuses on client-side data storage using cookies, localStorage, and sessionStorage. It includes login and cart features with persistent or session-based state management. |
 | `developer_tools`     | This project involves analyzing and using browser developer tools, specifically from [this website](https://dev-tools.hbtn.info/).                                               |
 | `flexbox`             | This project focuses on mastering the CSS Flexbox layout model to create responsive and flexible web designs.                                                                    |
 | `forms`               | This project explores creating, styling, and validating HTML5 forms to build user-friendly and accessible interfaces.                                                            |
@@ -65,6 +67,14 @@ By the end of this repository, the following concepts should be clearly understo
 - Utilize **Bootstrap 4.4** to create modern, responsive layouts effortlessly.  
 - Leverage its **grid system**, predefined components, and utility classes for rapid development.  
 - Override Bootstrap’s default styles with custom CSS for a unique design.  
+
+### **Cookies & Local Storage**  
+
+- Create, read, and manipulate **cookies** using vanilla JavaScript and `js-cookie`.  
+- Understand cookie settings such as expiration, domain, and path.  
+- Distinguish between **localStorage** (persistent) and **sessionStorage** (temporary).  
+- Build login and shopping cart features with client-side data storage.  
+- Dynamically update the DOM to reflect stored data.  
 
 ### **Developer Tools**  
 
