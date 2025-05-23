@@ -52,8 +52,8 @@
 
 			const expires = new Date(Date.now() + 10 * 864e5).toUTCString();
 
-			document.cookie = "email=" + email + "; " + expires;
-			document.cookie = "firstname=" + firstName + "; " + expires;
+			document.cookie = "email=" + email + "; " + "expires=" + expires;
+			document.cookie = "firstname=" + firstName + "; " + "expires=" + expires;
 
 			showWelcomeMessageOrForm();
 		};
