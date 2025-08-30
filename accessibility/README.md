@@ -19,6 +19,7 @@ Web accessibility ensures that all users, regardless of disabilities, can naviga
 The objective is to create web pages that comply with accessibility standards and provide a better user experience for individuals with **visual, auditory, motor, and cognitive impairments**.  
 
 The project includes:  
+
 - Analyzing the importance of accessibility in modern web development.  
 - Implementing **WCAG conformance levels (A, AA, AAA)** and evaluating their impact.  
 - Exploring **tools and techniques** for testing web accessibility.  
